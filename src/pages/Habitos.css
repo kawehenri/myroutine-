@@ -1,0 +1,200 @@
+.habitos-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.habitos-today-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.habito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid;
+  transition: all 0.3s ease;
+}
+
+.habito-item:hover {
+  transform: translateX(2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.habito-item.completed {
+  background: #e8f5e9;
+}
+
+.habito-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.habito-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.habito-icon {
+  font-size: 1.5rem;
+}
+
+.habito-name {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.habito-item.completed .habito-name {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.habito-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.habito-streak {
+  background: #ffe0b2;
+  color: #e65100;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.btn-icon:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.habitos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.habito-history {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.habito-history-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.habito-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.habito-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 600;
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.habito-day:hover {
+  transform: scale(1.1);
+}
+
+.habito-day.today {
+  border: 3px solid #ffd700;
+}
+
+.icone-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.icone-btn {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icone-btn:hover {
+  border-color: #667eea;
+  background: #f5f7ff;
+}
+
+.icone-btn.active {
+  border-color: #667eea;
+  background: #667eea;
+  transform: scale(1.1);
+}
+
+.cor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.cor-btn {
+  aspect-ratio: 1;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cor-btn:hover {
+  transform: scale(1.1);
+}
+
+.cor-btn.active {
+  border-color: #333;
+  transform: scale(1.15);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .habito-week {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25rem;
+  }
+
+  .icone-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+

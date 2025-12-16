@@ -1,0 +1,193 @@
+/* Responsividade Global */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .dashboard-grid,
+  .estudos-grid,
+  .treino-grid,
+  .sono-grid,
+  .alimentacao-grid,
+  .cronograma-grid,
+  .metas-grid,
+  .habitos-grid,
+  .config-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dashboard,
+  .estudos-page,
+  .treino-page,
+  .sono-page,
+  .alimentacao-page,
+  .cronograma-page,
+  .metas-page,
+  .habitos-page,
+  .configuracoes-page,
+  .calendario-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .dashboard-grid,
+  .estudos-grid,
+  .treino-grid,
+  .sono-grid,
+  .alimentacao-grid,
+  .cronograma-grid,
+  .metas-grid,
+  .habitos-grid,
+  .config-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .summary-grid,
+  .streaks-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .best-streaks-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mobile Pequeno */
+@media (max-width: 480px) {
+  .dashboard,
+  .estudos-page,
+  .treino-page,
+  .sono-page,
+  .alimentacao-page,
+  .cronograma-page,
+  .metas-page,
+  .habitos-page,
+  .configuracoes-page,
+  .calendario-page {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.625rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    margin: 0.5rem;
+    max-height: calc(100vh - 1rem);
+  }
+}
+
+/* Melhorias de contraste */
+.stat-label,
+.summary-label,
+.progress-bar-label,
+.config-description,
+.data-info-label {
+  color: var(--text-secondary) !important;
+  font-weight: 500;
+}
+
+.stat-value,
+.summary-value,
+.progress-bar-value {
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+.empty-state,
+.empty-state-small {
+  color: var(--text-secondary) !important;
+}
+
+/* Garantir contraste em inputs */
+input[type="text"],
+input[type="number"],
+input[type="time"],
+input[type="date"],
+textarea,
+select {
+  color: var(--text-primary) !important;
+  background: var(--bg-card) !important;
+  border-color: var(--bg-border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-disabled) !important;
+  opacity: 0.7;
+}
+
+/* Links com bom contraste */
+a {
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* Botões com bom contraste */
+.btn-primary {
+  background: var(--primary) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover) !important;
+}
+
+.btn-secondary {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--bg-border) !important;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-border) !important;
+  border-color: var(--primary) !important;
+}
+

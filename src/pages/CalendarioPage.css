@@ -1,0 +1,81 @@
+.calendario-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.calendario-page-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.day-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-section {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.detail-section h4 {
+  margin: 0 0 0.75rem 0;
+  color: #667eea;
+  font-size: 1.1rem;
+}
+
+.detail-section p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.detail-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #666;
+}
+
+.detail-list li {
+  margin-bottom: 0.5rem;
+}
+
+.more-items {
+  color: #999;
+  font-style: italic;
+}
+
+.notas-preview {
+  white-space: pre-wrap;
+  background: white;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.btn-go-to-day {
+  width: 100%;
+  padding: 0.75rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-go-to-day:hover {
+  background: #5568d3;
+}
+
+@media (max-width: 1024px) {
+  .calendario-page-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

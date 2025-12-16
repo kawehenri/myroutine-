@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Background */
+  --bg-main: #0F172A;
+  --bg-card: #1E293B;
+  --bg-border: #334155;
+  
+  /* Ações */
+  --primary: #3B82F6;
+  --primary-hover: #2563EB;
+  --secondary: #38BDF8;
+  
+  /* Estados */
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  
+  /* Texto */
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-disabled: #64748B;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-main);
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-card);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Aplicar tema escuro por padrão (nova paleta) */
+.card {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--bg-border);
+}
+
+.card-title {
+  color: var(--text-primary);
+}
+
+input,
+textarea,
+select {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--bg-border);
+}
+
+.form-input:focus,
+.timer-input:focus,
+.notas-textarea:focus {
+  border-color: var(--primary);
+}
+
+.modal-content {
+  background: var(--bg-card);
+}
+
+.modal-title {
+  color: var(--text-primary);
+}
+
+.empty-state,
+.empty-state-small {
+  color: var(--text-secondary);
+}
+
+.stat-label,
+.summary-label {
+  color: var(--text-secondary);
+}
+
+.stat-value,
+.summary-value {
+  color: var(--text-primary);
+}
+
+.activity-item,
+.event-item,
+.habito-item,
+.meal-item {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--bg-border);
+}
+
+.activity-name,
+.event-title,
+.habito-name,
+.meal-label {
+  color: var(--text-primary);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--bg-border);
+}
+
+.timer-category,
+.timer-preset {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--bg-border);
+}
+
+.summary-item {
+  background: var(--bg-card);
+  border-color: var(--bg-border);
+}
+
+/* Garantir contraste adequado em todos os textos */
+p, span, div, label, li {
+  color: var(--text-primary);
+}
+
+/* Textos secundários devem ter contraste suficiente */
+.text-secondary, .secondary-text {
+  color: var(--text-secondary) !important;
+}
+
+/* Inputs e textareas */
+input, textarea, select {
+  color: var(--text-primary) !important;
+  background: var(--bg-card) !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-disabled) !important;
+  opacity: 0.7;
+}
+
+/* Melhorar contraste de links */
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+  .main-content {
+    padding-bottom: 1rem;
+  }
+}
+

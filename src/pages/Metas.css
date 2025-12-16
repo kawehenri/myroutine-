@@ -1,0 +1,117 @@
+.metas-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.metas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.meta-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.meta-badge {
+  padding: 0.25rem 0.75rem;
+  background: #667eea;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.meta-category {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.meta-progress {
+  margin: 1.5rem 0;
+}
+
+.meta-achievement {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.meta-completed {
+  border: 2px solid #ffd700;
+  background: linear-gradient(135deg, #fffef7 0%, #ffffff 100%);
+}
+
+.meta-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.meta-actions .btn-edit,
+.meta-actions .btn-delete {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.meta-actions .btn-edit:hover {
+  border-color: #667eea;
+  background: #f5f7ff;
+}
+
+.meta-actions .btn-delete:hover {
+  border-color: #ef5350;
+  background: #ffebee;
+}
+
+.input-with-unit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-with-unit .form-input {
+  flex: 1;
+}
+
+.input-unit {
+  font-weight: 600;
+  color: #667eea;
+  min-width: 80px;
+}
+
+@media (max-width: 768px) {
+  .metas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
