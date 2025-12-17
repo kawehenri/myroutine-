@@ -2,20 +2,20 @@
   "name": "My Routine - Organização Pessoal",
   "short_name": "My Routine",
   "description": "Sistema completo de organização de rotina pessoal",
-  "start_url": "/myroutine-/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#667eea",
   "theme_color": "#667eea",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/myroutine-/icon-192.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/myroutine-/icon-512.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
