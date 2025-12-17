@@ -2,12 +2,12 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/myroutine_logo.png" />
+    <link rel="icon" type="image/png" href="/myroutine-/myroutine_logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#667eea" />
     <meta name="description" content="Sistema completo de organização de rotina pessoal - 100% frontend" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="manifest" href="/myroutine-/manifest.json" />
+    <link rel="apple-touch-icon" href="/myroutine-/icon-192.png" />
     <title>My Routine - Organização Pessoal</title>
   </head>
   <body>
@@ -17,7 +17,7 @@
       // Register service worker
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          navigator.serviceWorker.register('/myroutine-/sw.js')
             .then(registration => console.log('SW registered:', registration))
             .catch(err => console.log('SW registration failed:', err));
         });

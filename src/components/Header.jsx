@@ -122,12 +122,17 @@ export default function Header() {
       <div className="header-container">
         <Link to="/" className="header-logo">
           <img 
-            src="/myroutine_logo.png" 
+            src="/myroutine-/myroutine_logo.png" 
             alt="My Routine" 
             className="logo-icon"
             onError={(e) => {
-              console.error('Erro ao carregar logo');
-              e.target.style.display = 'none';
+              // Tentar caminho alternativo se o primeiro falhar
+              if (!e.target.src.includes('/myroutine-/')) {
+                e.target.src = '/myroutine-/myroutine_logo.png';
+              } else {
+                console.error('Erro ao carregar logo');
+                e.target.style.display = 'none';
+              }
             }}
           />
           <span className="logo-text">My Routine</span>

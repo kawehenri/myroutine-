@@ -1,7 +1,7 @@
 const CACHE_NAME = 'myroutine-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
+  '/myroutine-/',
+  '/myroutine-/index.html',
 ];
 
 // Install event

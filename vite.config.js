@@ -7,7 +7,7 @@ export default defineConfig({
   // IMPORTANTE: Ajuste o base conforme seu domínio:
   // - Para domínio customizado (ex: aquafloww.site): base: '/'
   // - Para GitHub Pages (ex: usuario.github.io/myroutine-): base: '/myroutine-/'
-  base: '/', // Altere para '/myroutine-/' se usar github.io
+  base: '/myroutine-/', // Configurado para GitHub Pages
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
