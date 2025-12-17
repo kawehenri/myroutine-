@@ -126,13 +126,8 @@ export default function Header() {
             alt="My Routine" 
             className="logo-icon"
             onError={(e) => {
-              // Tentar caminho alternativo
-              if (!e.target.src.includes('/myroutine-/')) {
-                e.target.src = '/myroutine-/myroutine_logo.png';
-              } else {
-                console.error('Erro ao carregar logo');
-                e.target.style.display = 'none';
-              }
+              console.error('Erro ao carregar logo');
+              e.target.style.display = 'none';
             }}
           />
           <span className="logo-text">My Routine</span>
