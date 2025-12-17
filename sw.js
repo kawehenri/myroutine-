@@ -1,4 +1,4 @@
-const CACHE_NAME = 'myroutine-v1';
+const CACHE_NAME = 'myroutine-v2';
 const urlsToCache = [
   '/myroutine-/',
   '/myroutine-/index.html',
@@ -31,13 +31,15 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
+      // Deletar TODOS os caches antigos (incluindo v1)
       return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            return caches.delete(cacheName);
-          }
+          return caches.delete(cacheName);
         })
       );
+    }).then(() => {
+      // Forçar controle imediato de todas as páginas
+      return self.clients.claim();
     })
   );
 });
