@@ -4,7 +4,10 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/myroutine-/',
+  // IMPORTANTE: Ajuste o base conforme seu domínio:
+  // - Para domínio customizado (ex: aquafloww.site): base: '/'
+  // - Para GitHub Pages (ex: usuario.github.io/myroutine-): base: '/myroutine-/'
+  base: '/', // Altere para '/myroutine-/' se usar github.io
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
